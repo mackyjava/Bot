@@ -1,0 +1,40 @@
+<ol class="chat" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <li
+    *ngFor="let bubble of bubbles; let i = index"
+   
+  >
+    <div
+      class="bubble"
+      [ngClass]="{
+        'bubbleRowLeft bubbleL': bubble.isBot,
+        ' bubbleRowRight bubbleR': !bubble.isBot
+      }"
+    >
+      <div class="talktext"  [@fade] = "stateAnimation ? 'hidden' : 'visible'">
+        <p>
+          <img
+            src="{{ bubble.isBot ? getIcon(true) : getIcon(false) }}"
+            class="botIcon"
+            [ngClass]="{
+              botIconPast: !bubble.isActive,
+              iconLeft: bubble.isBot,
+              iconRight: !bubble.isBot
+            }"
+          />
+          {{ bubble.message }}
+          <iframe
+            [src]="urlIframe"
+            frameborder="0"
+            *ngIf="urlIframe && bubble.isBot"
+            sandbox="allow-same-origin allow-scripts allow-presentation"
+          ></iframe>
+        </p>
+        <small class="date"  *ngIf="bubble.date"><em>{{ bubble.date | date: 'medium' }}</em></small>
+      </div>
+      <div  [@fade] = "stateAnimation ? 'visible' : 'hidden'">
+        <img src="../assets/img/load.gif" class="load">
+      </div>
+    </div>
+  </li>
+  
+</ol>

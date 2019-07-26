@@ -1,0 +1,8 @@
+export enum MsgEnum {
+    WELCOME,
+    SUCCESS,
+    CONECTION_ERROR,
+    UNKNOW_ERROR,
+    INPUT_PLACEHOLDER,
+    BOT_WELCOME
+}

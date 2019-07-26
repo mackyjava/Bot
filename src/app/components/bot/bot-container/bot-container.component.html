@@ -1,0 +1,15 @@
+<div class="grid-container-fluid">
+<app-nav-bot [navColor] ="styles.navColor" [fontColor]="styles.fontColor"></app-nav-bot>
+<div class="central-div"> 
+  <div class="chat">
+    <app-bubbles
+      [bubbles]="bubbles" 
+       [src] = 'url'
+       [urlIframe]="urlIframe | safeResource: 'resourceUrl'"
+       [stateAnimation] = "animationState" 
+    ></app-bubbles> 
+  </div>
+</div>
+<app-footer-bot (bubble)="emitMsgBubble($event)"></app-footer-bot>
+</div>
+ 

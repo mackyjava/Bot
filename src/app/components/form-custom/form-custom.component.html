@@ -1,0 +1,69 @@
+<div class="grid-container">
+    <h3>Custom Bot</h3>
+  <form [formGroup]= "styleForm" class="grid-row" (ngSubmit)="saveStyles(styleForm.value)">
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Insert Hexadecimal color for navbar</mat-label>
+      <input matInput formControlName="navColor"/>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Insert Image Background url</mat-label>
+      <input matInput formControlName="url" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Inser Hexadecimal color for  font nav</mat-label>
+      <input matInput formControlName="fontColor" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Inser Hexadecimal </mat-label>
+      <input matInput formControlName="footColor" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Inser Hexadecimalform field</mat-label>
+      <input matInput formControlName="fontSize" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Inser Hexadecimalform field</mat-label>
+      <input matInput formControlName="bubbleUser" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      floatLabel="always"
+      class="grid-col-lg-10"
+    >
+      <mat-label>Inser Hexadecimalform field</mat-label>
+      <input matInput formControlName="bubbleBot" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <button type="submit" mat-flat-button color="primary">Apply styles</button>
+  </form>
+</div>

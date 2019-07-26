@@ -1,0 +1,11 @@
+<nav class="grid-container-fluid">
+  <div class="grid-row" [ngStyle]="{'background-color':navColor}">
+    <div class="grid-col-lg-4"></div>
+   <div class="grid-col-lg-4"  [ngStyle]="{'color': fontColor }" class="nav-brand">
+     <h4 class="text-shadowed">{{ msg.getMessage(msgId.WELCOME)}} <img src="/assets/img/botNav.png" class="bot-nav"></h4>
+     
+   </div>
+   <div class="grid-col-lg-8"></div>
+  </div> 
+  <mat-divider></mat-divider> 
+</nav>
